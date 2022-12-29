@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+body {
+    font-family: "Fraunces", "Montserrat", serif;
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    max-width: 666px;
+    margin: 0 1rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    display: flex;
+}
+
+.img_container {
+    width: 50%;   
+}
+
+.img_container img {
+    height: 100%;   
+    width: 100%; 
+    object-fit: cover;
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+}
+
+.inforn_const {
+    width: 50%;
+    padding: 2rem;
+}
+
+
+.inforn_const .perfume {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+    margin-bottom: 1.75rem;
+    font-family: "Monserrat";
+}
+
+.inforn_const .gabrielle{
+    color: hsl(212, 21%, 14%);
+    padding-right: 2rem;
+    margin-bottom: 1.75rem;
+}
+
+.inforn_const .floral {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    font-family: "Monserrat";
+    margin-bottom: 1.75rem;
+    line-height: 22px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.75rem;
+    gap: 1rem;
+}
+
+.price .price_now {
+    color: hsl(158, 36%, 37%);
+    font-size: 700;
+}
+
+.price .price_now del {
+    font-family: "Monserrat";
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    text-decoration:  line-through; /*can also use <del> for this in html */
+    
+}
+
+.inforn_const .btn {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: hsl(158, 36%, 37%) ;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-family: "Monserrat";
+    /* gap: 1rem; can also use &nbsp; for this in html */
+    transition: 0.5s;
+    cursor: pointer;
+    
+    
+    
+}
+
+.inforn_const .btn:hover {
+    background-color: hsl(138, 90%, 14%);
+}
+
+@media only screen and (max-width: 550px) {
+
+    .card{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+    }
+
+    .img_container {
+        width: 100%; 
+        height: 40%;  
+    }
+
+    .img_container img {
+        content: url("./mobile.jpg");
+        border-top-left-radius:10px;
+        border-top-right-radius:10px;
+        border-bottom-left-radius: 0px;
+
+    }
+
+    .inforn_const {
+        width: 100%;
+    }
+
+    .inforn_const .gabrielle{
+        padding-right: 0;
+    }
+}
+
